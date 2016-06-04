@@ -5,33 +5,43 @@ Delete-Apps.ps1 - PowerShell script to detect Windows Apps and delete/installs i
 ## .DESCRIPTION 
 This PowerShell script will try to get the AppxPackage and delete or install the application 
 on your Windows 8, Windows 8.1 or Windows 10 device. You will need to execute on some devices 
-the following PowerShell command: "Set-ExecutionPolicy RemoteSigned" - this will ensure you 
+the following PowerShell command: 
+```Powershell
+"Set-ExecutionPolicy RemoteSigned"
+```
+this will ensure you 
 have enough privileges to delete those apps. Also you have the ability to delete system Apps,
 where we don't have in our Database.ps1 - Support us and send us your list of Apps: 
 "Get-AppxPackage | Select Name" in PowerShell and send us the output or you can directly save 
 in a text file with the following command: 
+```Powershell
 "Get-AppxPackage | Select Name >> $env:userprofile\Desktop\Windows-Apps_$(gc env:computername).txt"
+```
 
 ## .EXAMPLE
+```Powershell
 .\Delete-Apps.ps1
+```
 
 ## .OUTPUT
 NONE
 
 ## .PARAMETER LANG CODE (2 Letter ISO Code)
 You can also switch the language by .\Delete-Apps.ps1 DE (for German)
+
 Currently supported languages DE,FR,EN
 
 ## .NOTES
 Written by Sascha Sebastian Helfinger - sascha.sebastian.helfinger@shelfinger.com, sh@shelfinger.eu
+
 Technical Consultant/Director at SHelfinger Sarl - https://shelfinger.eu, http://shelfinger.com
 
 You can also find me on:
 
-* Twitter: https://twitter.com/shelfinger
-* LinkedIn: http://tg.linkedin.com/in/shelfinger/
-* Github: https://github.com/shelfinger
-* Facebook: https://facebook.com/SHelfinger.EU
+* Twitter: (https://twitter.com/shelfinger "Find me on Twitter")
+* LinkedIn: (http://tg.linkedin.com/in/shelfinger/ "Find me on LinkedIn")
+* Github: (https://github.com/shelfinger "Find me here :P")
+* Facebook: (https://facebook.com/SHelfinger.EU "Find me on Facebook")
 
 ## License:
 
