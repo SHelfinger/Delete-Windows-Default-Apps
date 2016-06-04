@@ -38,14 +38,14 @@ Technical Consultant/Director at SHelfinger Sarl - https://shelfinger.eu, http:/
 
 You can also find me on:
 
-* Twitter: (https://twitter.com/shelfinger "Find me on Twitter")
-* LinkedIn: (http://tg.linkedin.com/in/shelfinger/ "Find me on LinkedIn")
-* Github: (https://github.com/shelfinger "Find me here :P")
-* Facebook: (https://facebook.com/SHelfinger.EU "Find me on Facebook")
+* Twitter: https://twitter.com/shelfinger
+* LinkedIn: http://tg.linkedin.com/in/shelfinger/
+* Github: https://github.com/shelfinger
+* Facebook: https://facebook.com/SHelfinger.EU
 
 ## License:
 
-The MIT License (MIT)
+[The MIT License (MIT)](../blob/master/LICENSE)
 
 Copyright (c) 2016 Sascha Sebastian Helfinger
 
@@ -68,7 +68,9 @@ OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
 ## Change Log:
+```
 V1.00, 31/05/2016 - First release
 V1.01, 02/06/2016 - Database updatable function included
 V1.02, 03/06/2016 - Language (DE, FR, EN) and updatable function included
 V1.03, 04/06/2016 - Added the Global Package delete function
+```
