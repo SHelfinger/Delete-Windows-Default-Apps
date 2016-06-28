@@ -73,4 +73,5 @@ V1.00, 31/05/2016 - First release
 V1.01, 02/06/2016 - Database updatable function included
 V1.02, 03/06/2016 - Language (DE, FR, EN) and updatable function included
 V1.03, 04/06/2016 - Added the Global Package delete function
+V1.04, 27/06/2016 - Bug from "Updating the Database" when it's older than 7 days
 ```
