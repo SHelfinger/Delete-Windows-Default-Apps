@@ -1,4 +1,4 @@
-﻿<#
+<#
 .SYNOPSIS
 Delete-Apps.ps1 - PowerShell script to detect Windows Apps and delete/installs it.
 
@@ -62,6 +62,7 @@ V1.00, 31/05/2016 - First release
 V1.01, 02/06/2016 - Database updatable function included
 V1.02, 03/06/2016 - Language (DE, FR, EN) and updatable function included
 V1.03, 04/06/2016 - Added the Global Package delete function
+V1.04, 27/07/2016 - Bug from "Updating the Database" when it's older than 7 days
 #>
 
 
@@ -79,7 +80,7 @@ $database_file = "$PSScriptRoot\Database.ps1"
 $WindowsSupported = 0
 $PowerShellMinimumVersion = "2.0.0"
 $PowerShellVersion = $PSVersionTable.PSVersion
-$ScriptVersion = "1.02"
+$ScriptVersion = "1.03"
 
 Function LogWrite {
    Param ([string] $logstring)
@@ -123,6 +124,7 @@ if(![System.IO.File]::Exists($database_file)){
         LogWrite "File is: $(((get-date) - $lastWrite).TotalDays) days old."
         Remove-Item $database_file
         Get-Database
+        . $database_file
     } else {
         LogWrite "Database file found and not older than 7 days."
         . $database_file
@@ -138,7 +140,7 @@ Foreach ($v in $versions) {
     } 
 }
 if ([version]$PowerShellVersion -lt [version]$PowerShellMinimumVersion) {
-    $WindowsSupported = 0
+    $WindowsSupported = 1
 }
 if ($WindowsSupported -eq 0) { 
     Write-Host "Your Windows Version ($OSVersion) is currently not supported from this PowerShell Script."
